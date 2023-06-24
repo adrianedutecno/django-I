@@ -1,10 +1,13 @@
-# Modulo Base de Datos, Bases de datos relacionales
+# Modulo Django, Django como framework de desarrollo web
 
-_Proyectos que permiten la ejemplificación de códigos en psql y sql, con diferente complejidad.
+_Proyectos que permiten la ejemplificación Django como framework.
 
-* estructura del lenguaje sql.
-* creación, inserción, modificación, eliminación de base de datos.
-* creación, inserción, modificación, eliminación en tablas.
+* crear proyecto.
+* crear aplicación,
+* estructura de Django.
+* creacion de views o controladores.
+* registro de la aplicación.
+* creación de template
 * creación de modelos entidad relación.
   _
 
@@ -48,6 +51,7 @@ Realizar un fork o clon del proyecto, importar al IDE de preferencia, para ejecu
 
 * [PostgreSQL](https://www.postgresql.org/)
 * [Visual Studio Code](https://code.visualstudio.com/)
+* [PyCharm]()
 * [Git](https://git-scm.com/)
 * [GitHub](https://github.com/)
 
