@@ -1,4 +1,4 @@
-# Modulo Django, Django como framework de desarrollo web
+# Módulo Django, Django como framework de desarrollo web
 
 _Proyectos que permiten la ejemplificación Django como framework.
 
