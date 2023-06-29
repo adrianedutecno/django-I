@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<!-- formulario de creacion de libros  -->
+<section class="container mt-5">
+  <h2>Crear libro</h2>
+  <form method="post" action="{% url 'crear_libro' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn btn-primary" value="Guardar">
+  </form>
+</section>
+{% endblock %}
