@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+{% load bootstrap5 %}
+{% block content %}
+    <section class="container mt-5">
+        <div class="d-flex mb-1">
+            <h2 class="d-inline-flex">Lista Libros</h2>
+            <a class="d-inline-flex btn btn-primary ms-2" href="{% url 'crear_libro' %}" role="button">Crear</a>
+        </div>
+        {% bootstrap_messages %}
+        {% if libros %}
+        <!-- tabla con libros -->
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Titulo</th>
+              <th scope="col">Autor</th>
+              <th scope="col">Valoración</th>
+              <th scope="col">Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for libro in libros %}
+            <tr>
+              <td>{{ libro.id }}</td>
+              <td>{{ libro.titulo }}</td>
+              <td>{{ libro.autor }}</td>
+              <td>{{ libro.valoracion }}</td>
+              <td>
+                <a class="btn p-0" href="{% url 'editar_libro' libro_id=libro.id %}" role="button">
+                    <!--icono de edicion-->
+                    <i class="fa fa-edit fa-lg text-primary"></i>
+                </a>
+              </td>
+            </tr>
+          {% empty %}
+            <tr>
+                <td colspan="4">No hay libros disponibles</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+        {% else %}
+        <!-- No hay libros -->
+        <p>No hay libros disponibles</p>
+        {% endif %}
+
+    </section>
+{% endblock%}

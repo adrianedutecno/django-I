@@ -1,0 +1,15 @@
+base.html -> estructura base
+	include: navbar.html -> barra de navegación
+
+layout.html -> template a reutilizar
+	extends: base.html -> estructura base
+
+index.html -> página principal
+	extends: layout.html -> template a reutilizar
+
+lista_libros.html -> página para listar libros
+    extends: layout.html -> template a reutilizar
+
+crear_libro.html -> página de creación
+    extends: layout.html -> template a reutilizar
+
