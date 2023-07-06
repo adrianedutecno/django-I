@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% load bootstrap5 %}
+
+{% block content %}
+<!-- formulario de edicion de libros  -->
+<section class="container mt-5">
+  <h2>Editar libro</h2>
+  {% bootstrap_messages %}
+  <form method="post" action="{% url 'editar_libro' libro_id=libro_id %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn btn-primary" value="Guardar">
+  </form>
+</section>
+{% endblock %}

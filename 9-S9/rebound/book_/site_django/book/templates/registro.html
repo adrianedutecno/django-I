@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% load bootstrap5 %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<section class="container mt-5">
+  <h2>Registro</h2>
+  <form method="post" action="{% url 'registro' %}">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" class="btn btn-primary" value="Registro">
+  </form>
+</section>
+{% endblock %}
